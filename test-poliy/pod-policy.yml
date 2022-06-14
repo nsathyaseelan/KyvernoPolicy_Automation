@@ -1,0 +1,23 @@
+apiVersion: kyverno.io/v1
+kind: Policy
+metadata:
+  name: require-pod-requests-and-limits
+  namespace: sathya-test
+spec:
+  validationFailureAction: audit
+  rules:
+  - name: validate-resource-limits
+    match:
+      any:
+      - resources:
+          kinds:
+          - Pod
+    validate:
+      message: "The max any Pod can use in this namespace is 200m of CPU and 1Gi of memory."
+      pattern:
+        spec:
+          containers:
+          - resources:
+              limits:
+                memory: "<=1Gi"
+                cpu: "<=200m"
