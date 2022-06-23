@@ -3,7 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: attest-sbom
   annotations:
-    policies.kyverno.io/category: "Best Practice"
+    policies.kyverno.io/category: "Sample"
 spec:
   validationFailureAction: audit
   webhookTimeoutSeconds: 30
