@@ -1,0 +1,9 @@
+clusterPatches:
+- target:
+     kind: Cluster
+     name: us-west-1-cluster-1
+  kustomizePatch: ./us-west-1-cluster-1/
+- target:
+     kind: Cluster
+     name: us-west-2-cluster-1
+  kustomizePatch: ./us-west-2-cluster-1/
