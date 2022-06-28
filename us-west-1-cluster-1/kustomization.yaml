@@ -1,0 +1,15 @@
+resources:
+- ../guestbook-base.yaml
+patchesStrategicMerge:
+- |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: frontend
+    spec:
+      template:
+        metadata:
+          labels:
+            app: "guestbook"
+          annotations:
+            nirmata.io/app-type: kustomize-demo-c1
