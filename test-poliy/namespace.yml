@@ -2,7 +2,7 @@ apiVersion: kyverno.io/v1
 kind: Policy
 metadata:
   name: require-pod-requests-and-limits
-  namespace: sathya
+  namespace: test
 spec:
   validationFailureAction: enforce
   rules:
