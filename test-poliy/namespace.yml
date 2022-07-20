@@ -1,7 +1,7 @@
 apiVersion: kyverno.io/v1
 kind: Policy
 metadata:
-  name: require-pod-requests-and-limits
+  name: require-pod-requests
   namespace: test
 spec:
   validationFailureAction: enforce
